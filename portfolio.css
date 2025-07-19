@@ -1,0 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+nav {
+  background: #1a1a1a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h1 {
+  color: #00ffff;
+  font-weight: 700;
+}
+
+nav .nav-toggle {
+  display: none;
+  font-size: 28px;
+  color: #00ffff;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00ffff;
+}
+
+section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid #222;
+}
+
+h2 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 15px 0 8px;
+  color: #00ffff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+p, li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #1a1a1a;
+  border-top: 1px solid #222;
+}
+
+footer a {
+  color: #00ffff;
+}
+
+.project-cards,
+.skill-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card,
+.skill-card,
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.skill-card:hover,
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff44;
+}
+
+.skill-card {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0 20px;
+  flex-wrap: wrap;
+}
+
+.tech-logos img {
+  width: 40px;
+  height: auto;
+}
+
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  background: #1e1e1e;
+  border: none;
+  border-radius: 10px;
+  padding: 18px;
+  color: #fff;
+  font-size: 16px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #777;
+}
+
+button {
+  width: 100%;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #00cccc;
+}
+
+#confirmation {
+  color: #00ff88;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  nav .nav-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #1a1a1a;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+  .project-card, .skill-card {
+    flex: 1 1 100%;
+  }
+}
